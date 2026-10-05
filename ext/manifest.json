@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Faces Helper",
+  "version": "1.0.0",
+  "description": "Marque la bonne suggestion (*) dans le jeu Lucca Faces en hashant la photo.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.ilucca.net/faces/*"
+      ],
+      "js": [
+        "db.js",
+        "interceptor.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ]
+}
